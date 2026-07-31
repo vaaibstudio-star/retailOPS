@@ -1,0 +1,59 @@
+---
+description: Locked RetailOps V1 engineering and interface rules
+globs:
+  - "apps/pos-web/**/*"
+  - "apps/server/**/*"
+  - "packages/**/*"
+alwaysApply: true
+---
+
+# RetailOps V1 rules
+
+## Authority
+Use this order of authority:
+1. docs/PRODUCT-CONTRACT.md and docs/TECHNICAL-HANDOFF.md when present.
+2. The approved RetailOps screen copy and route contract in the active Cursor prompt.
+3. The working app under apps/pos-web.
+4. reference/make-prototype only as a visual and interaction reference.
+
+Never edit reference/make-prototype.
+
+## Scope
+V1 includes front counter, storeroom and minimal admin only.
+Do not add owner dashboards, general reports, inventory analytics, purchasing, accounting, supplier tools or competitor intelligence.
+
+## Staff usability
+- Staff open directly into work, not a dashboard.
+- One obvious primary action per screen.
+- Use literal staff language.
+- Hide diagnostics under More details or manager-only views.
+- Preserve unfinished work.
+- Every error must explain the next safe action.
+
+## Locked corrections to the Make prototype
+- Remove dashboard-first routing.
+- Remove EFT.
+- F12 means Take payment, not Lock register.
+- Never store or compare plaintext PINs in production code.
+- Do not hard-code employees, products or completed orders inside App.tsx.
+- Do not claim Shopify, printer or card-terminal success without an explicit confirmed state.
+- Use ZAR and integer cents.
+- Prices are VAT-inclusive at 15%; do not add VAT on top of the displayed selling price.
+- Measured quantities use integer tenths of a metre; never use binary floating point for money or measured inventory.
+- A paid sale is recorded locally before background Shopify update.
+- Storeroom work must not wait for Shopify.
+
+## Code quality
+- TypeScript strict mode.
+- Small files and explicit domain types.
+- Separate UI, domain, state and external adapters.
+- No external calls directly from presentation components.
+- Validate all consequential inputs.
+- Add tests for money, measured quantities, payment allocation and order-state transitions.
+- Do not add dependencies unless required and justified in the change report.
+
+## Security
+- Shopify tokens and secrets remain server-side.
+- PINs must be salted and hashed server-side before pilot.
+- Never commit secrets or real customer data.
+- All payment confirmation, refunds, corrections, approvals and cash-up closure require audit records.
