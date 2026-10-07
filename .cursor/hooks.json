@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "hooks": {
+    "beforeShellExecution": [
+      {
+        "command": "python3 ../vaaib-growth-os/scripts/vaaib_guard.py",
+        "timeout": 10,
+        "matcher": "shopify|git\\b|gh |curl|wget|http"
+      }
+    ],
+    "preToolUse": [
+      {
+        "command": "python3 ../vaaib-growth-os/scripts/vaaib_guard.py",
+        "timeout": 10,
+        "matcher": "MCP:.*|Shell"
+      }
+    ]
+  }
+}
