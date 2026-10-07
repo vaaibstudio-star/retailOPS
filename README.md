@@ -1,6 +1,6 @@
 # RetailOPS
 
-Production repository for the VaaibOPS RetailOps pilot at Superior Electrical.
+Implementation repository for **RetailOS** (VAAIB retail operations product). Superior Electrical is the pilot tenant. Current status and open decisions: [DISPOSITION.md](DISPOSITION.md).
 
 ## Repository purpose
 

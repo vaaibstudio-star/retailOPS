@@ -1,0 +1,9 @@
+{
+  "schema": "vaaib.runtime.lock/1",
+  "client": "retailos",
+  "canonical_repository": "vaaibstudio-star/vaaib-growth-os",
+  "requires_runtime": "4.0",
+  "verified_runtime": "4.0.0",
+  "verified_at": "2026-10-07",
+  "bootstrap": "thin"
+}
