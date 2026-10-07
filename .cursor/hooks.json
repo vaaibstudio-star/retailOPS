@@ -5,7 +5,7 @@
       {
         "command": "python3 ../vaaib-growth-os/scripts/vaaib_guard.py",
         "timeout": 10,
-        "matcher": "shopify|git push|gh |curl|wget|http"
+        "matcher": "shopify|git\\b|gh |curl|wget|http"
       }
     ],
     "preToolUse": [
