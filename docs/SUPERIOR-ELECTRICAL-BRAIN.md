@@ -1,6 +1,6 @@
 # Superior Electrical brain pointer
 
-The canonical Superior Electrical client brain lives in **`vaaibstudio-star/superior-electrical`** (`workspaces/superior-electrical/MASTER-BRAIN.md`). It moved out of `vaaib-growth-os` (whose copy is now a pointer). The Social Publisher contract is at `superior-electrical/workspaces/superior-electrical/handoffs/SOCIAL-PUBLISHER-V1.md`.
+The canonical Superior Electrical client brain lives in **`vaaibstudio-star/superior-electrical`** (private). It moved out of `vaaib-growth-os` (whose copy is now a pointer).
 
 Superior Electrical is RetailOS's **pilot tenant**: its configuration and pilot evidence belong to the pilot, never hard-coded into product logic.
 
